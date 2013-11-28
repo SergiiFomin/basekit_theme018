@@ -1,0 +1,144 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">    
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            {{widget('logo', 'name', {"defaultlogo": asset('images/logo.jpg')})|raw}}
+                            {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+
+                            <div class="fright">
+                                {{widget('content', 'fright', {content: '<ul class="top"><li><a href="#">Help</a></li><li><a href="#">Site map</a></li><li><a href="#">FAQs</a></li></ul>', lines: 'all'})|raw}}
+                                {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                            </div>
+
+                            <div class="clear"></div>
+
+                            {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': true, 'allowPause': true, 'allowLoop': true, 'images':[{'imageHeight':'500', 'imageWidth':'1170', 'url':'http://placehold.it/1170x500', 'title':'test title', 'description': 'test desc'},{'imageHeight':'500', 'imageWidth':'1170', 'url':'http://placehold.it/1170x500', 'title':'test title', 'description': 'test desc'},{'imageHeight':'500', 'imageWidth':'1170', 'url':'http://placehold.it/1170x500', 'title':'test title', 'description': 'test desc'},{'imageHeight':'500', 'imageWidth':'1170', 'url':'http://placehold.it/1170x500', 'title':'test title', 'description': 'test desc'}]})|raw}}
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                    <div class="row">
+                        <article class="span3">
+
+                            <div class="img-block">
+                                {{widget('image', 'image1', { 'src': asset('images/page1-img1.jpg'), 'imageWidth': '768px'})|raw}}
+                                <div class="indent">
+                                    {{widget('content', 'text1', {content: '<h1>welcome</h1><h3>Praesent vesti bulum molestie lacus</h3><p>Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus. et magnis dis parturient montes nascetur ridiculus mus</p><p>Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+                        <article class="span9">
+
+                            <div class="row">
+                                <article class="span3">
+                                    
+                                    {{widget('content', 'text2', {content: '<h2>who we are</h2><h3>Praesent vestibulum molestie</h3><p>Praesent vestibulum molestie lacus. Aenean nonummy hendrit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus . Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus.</p>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                                <article class="span3">
+                                    
+                                    {{widget('content', 'text3', {content: '<h2>capabilities</h2><ul class="list"><li>Praesent vestibulum molestie lacus</li><li>Aenean nonummy hendrit mauris</li><li>Phasellus porta fusce suscipit varius mi</li><li>Cum sociis natoque penatibus</li><li>Et magnis dis parturient montes</li></ul>', lines: 'all'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                                <article class="span3">
+                                    
+                                    <div class="img-block">
+                                        <div class="indent">
+
+                                            {{widget('content', 'text4', {content: '<time><span>25</span>nov</time><h3>Praesent vesti bulum mol est ie lacus</h3><p>Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                        </div>
+                                    </div>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                            </div>
+
+                            {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+
+                            <div class="row">
+                                <article class="span3">
+                                    
+                                    {{widget('content', 'title1', {content: '<h2>modeling</h2>', lines: 'all'})|raw}}
+                                    {{widget('image', 'image2', { 'src': asset('images/page1-img2.jpg'), 'imageWidth': '262px'})|raw}}
+                                    {{widget('content', 'text5', {content: '<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button1', {italic: false, text:'More', 'align':'widget-align-left'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                                <article class="span3">
+                                    
+                                    {{widget('content', 'title2', {content: '<h2>analysis</h2>', lines: 'all'})|raw}}
+                                    {{widget('image', 'image3', { 'src': asset('images/page1-img3.jpg'), 'imageWidth': '262px'})|raw}}
+                                    {{widget('content', 'text6', {content: '<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button2', {italic: false, text:'More', 'align':'widget-align-left'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                                <article class="span3">
+                                    
+                                    {{widget('content', 'title3', {content: '<h2>planning</h2>', lines: 'all'})|raw}}
+                                    {{widget('image', 'image4', { 'src': asset('images/page1-img4.jpg'), 'imageWidth': '262px'})|raw}}
+                                    {{widget('content', 'text7', {content: '<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button3', {italic: false, text:'More', 'align':'widget-align-left'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span6">
+
+                            {{widget('companyname', 'companyname', {"business": "center point"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy Copyright 2013. All rights reserved'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+                        <article class="span6">
+
+                            <div class="right">
+                                {{widget('content', 'call', {content: 'call us toll free', lines: 'all'})|raw}}
+                                {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'1 800 345 67 89'})|raw}}
+                                {{widget('space', 'space', {'height': '30'})|raw}}
+                            </div>
+
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>    
+</div>
+{% endblock %}

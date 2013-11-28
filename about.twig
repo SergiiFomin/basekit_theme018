@@ -1,0 +1,128 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            {{widget('logo', 'name', {"defaultlogo": asset('images/logo.jpg')})|raw}}
+                            {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+
+                            <div class="fright">
+                                {{widget('content', 'fright', {content: '<ul class="top"><li><a href="#">Help</a></li><li><a href="#">Site map</a></li><li><a href="#">FAQs</a></li></ul>', lines: 'all'})|raw}}
+                                {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                            </div>
+
+                            <div class="clear"></div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->
+
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+                    
+                    <div class="row">
+                        <article class="span4">
+
+                            {{widget('content', 'text1', {content: '<h2>Our advantages</h2><ul class="drop"><li><span class="drop">1</span><strong>Praesent vestibulum molestie lacus. Aenean</strong><p>Monummy hendrit mauris. Phasellus porta. Fusce ster suscipit varius mi. Cum sociis nato.</p></li><li><span class="drop">2</span><strong>Eibulum molestie lacus. Aenean lorem poryta.</strong><p>Onummy hendrit mauris. Phasellus porta. Fusce ster suscipit varius mi. Cum sociis nato.</p></li><li><span class="drop">3</span><strong>Praesent vestibulum molestie lacus. Aenean</strong><p>Nonummy hendrit mauris. Phasellus porta. Fusce ster suscipit varius mi. Cum sociis nato.</p></li></ul>', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                            {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                            {{widget('content', 'text2', {content: '<h2>our principles</h2><ul class="list"><li>Praesent vestibulum molestie lacus enean nonummy</li><li>Hendrit mauris hasellus porta fusce sus</li><li>Cipit varius mi ucm sociis natoque penatibus lorem</li><li>Et magnis dis parturient montes nascetur rid</li><li>Clus  nulla dui fusce feugiat malesuada</li><li>Idio norbi nunc odio gravida at  cursus ec luctus alorem</li><li>Maecenas tristique orci ac sem uis ult</li><li>Praesent vestibulum molestie lacus enean nonummy</li><li>Hendrit mauris hasellus porta fusce sus</li></ul>', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+                        <article class="span8">
+
+                            {{widget('content', 'content', {content: '<h2>A Few Words About Us</h2><p><strong>Molestie lacus. Aenean Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla lorem porta srens.</strong></p><p>Monummy hendrit mauris. Phasellus porta. Fusce ster suscipit varius mi. Cum sociis nato. Que penatibus et magnis dis parturient montes, nascetur ridiculus . Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus. Nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.</p>', lines: 'all'})|raw}}
+                            {{widget('button', 'button', {italic: false, text:'More', 'align':'widget-align-left'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                            {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                            {{widget('content', 'content', {content: '<h2>Our Team</h2>', lines: 'all'})|raw}}
+
+                            <ul class="images">
+                                <li>
+                                    <div class="indent">
+                                        {{widget('image', 'teamimage1', { 'src': asset('images/page2-img1.jpg'), 'imageWidth': '420px'})|raw}}
+                                        {{widget('content', 'teamcontent1', {content: '<strong>Laura Stegner</strong>Monummy hendrit mauris. Phasels.', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indent">
+                                        {{widget('image', 'teamimage2', { 'src': asset('images/page2-img2.jpg'), 'imageWidth': '420px'})|raw}}
+                                        {{widget('content', 'teamcontent2', {content: '<strong>Laura Stegner</strong>Monummy hendrit mauris. Phasels.', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indent">
+                                        {{widget('image', 'teamimage3', { 'src': asset('images/page2-img3.jpg'), 'imageWidth': '420px'})|raw}}
+                                        {{widget('content', 'teamcontent3', {content: '<strong>Laura Stegner</strong>Monummy hendrit mauris. Phasels.', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indent">
+                                        {{widget('image', 'teamimage4', { 'src': asset('images/page2-img4.jpg'), 'imageWidth': '420px'})|raw}}
+                                        {{widget('content', 'teamcontent4', {content: '<strong>Laura Stegner</strong>Monummy hendrit mauris. Phasels.', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indent">
+                                        {{widget('image', 'teamimage5', { 'src': asset('images/page2-img5.jpg'), 'imageWidth': '420px'})|raw}}
+                                        {{widget('content', 'teamcontent5', {content: '<strong>Laura Stegner</strong>Monummy hendrit mauris. Phasels.', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                            </ul>
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span6">
+
+                            {{widget('companyname', 'companyname', {"business": "center point"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy Copyright 2013. All rights reserved'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+                        <article class="span6">
+
+                            <div class="right">
+                                {{widget('content', 'call', {content: 'call us toll free', lines: 'all'})|raw}}
+                                {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'1 800 345 67 89'})|raw}}
+                                {{widget('space', 'space', {'height': '30'})|raw}}
+                            </div>
+
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock %}
